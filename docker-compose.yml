@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  data_collection:
+    build: ./data_collection
+    ports:
+      - "8000:8000"
+
+  data_analysis:
+    build: ./data_analysis
+    ports:
+      - "8001:8001"
+    depends_on:
+      - data_collection
+
+  data_visualization:
+    build: ./data_visualization
+    ports:
+      - "8002:8002"
+    depends_on:
+      - data_analysis
