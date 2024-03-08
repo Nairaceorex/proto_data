@@ -1,0 +1,4 @@
+requests~=2.31.0
+fastapi~=0.110.0
+pandas~=2.2.1
+tinkoff~=0.1.1
